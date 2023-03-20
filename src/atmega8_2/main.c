@@ -12,8 +12,11 @@ ISR(PCINT0_vect)
 
 int main(void)
 {
+	
+
 	sei();					 		// Разрешаем прерывания глобально
 	while (1)
 	{
+		
 	}
 }

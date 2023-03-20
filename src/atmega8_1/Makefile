@@ -1,9 +1,9 @@
-MCU=attiny84
+MCU=atmega8
 F_CPU=1200000
 CC=avr-gcc
 OBJCOPY=avr-objcopy
 CFLAGS=-std=c99 -Wall -g -Os -mmcu=${MCU} -DF_CPU=${F_CPU} -I.
-TARGET=../build/main
+TARGET=../../build/atmega8_1/atmega8_1_build
 SRCS=main.c
 
 all:
@@ -21,4 +21,4 @@ all:
 # 	${OBJCOPY} -j .text -j .data -O ihex ${TARGET}.bin ${TARGET}.hex
 
 clean:
-	rm -f ../build/*.bin ../build/*.hex
+	rm -f ../../build/atmega8_1/*.bin ../../build/atmega8_1/*.hex
