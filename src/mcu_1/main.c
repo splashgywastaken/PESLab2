@@ -8,47 +8,33 @@
 #define SWITCHSIGNAL(PORTX, PORTXN) ((PORTX) ^= (1 << (PORTXN)))
 
 // Кнопка переключения режима работы двигателя
-#define RBUTTON PORTD3
+#define RBUTTON PORTB0
 // Кнопка включения/выключения (стоп/старт)
-#define ONOFFBUTTON PORTD2
+#define ONOFFBUTTON PORTB1
 // Реле для движения вперед
-#define FRELAY PORTC0
+#define FRELAY PORTA0
 // Реле для движения назад
-#define RRELAY PORTC1
+#define RRELAY PORTA1
 // Реле для включения/выключения двигателя
-#define ONOFFRELAY PORTC2
-
-static bool is_in_reverse = false;
-static bool is_off = true;
-
-// // Функция переключающая сигнал на противоположный 
-// // для определенной группы портов portx, определенного порта portxn
-// static void switch_signal(int portx, int portxn)
-// {
-// 	(portx) ^= (1 << (portxn));
-// }
+#define ONOFFRELAY PORTA2
 
 // Обработчик прерывания PCINT0
 ISR(PCINT0_vect)
 {
 	// Проверка и работа с кнопкой переключения режимов работы двигателя
-	if (CHECKBUTTON(PIND, RBUTTON))
+	if (CHECKBUTTON(PINB, RBUTTON))
 	{
 		// Переключение сигнала для реле отвечающего за движение вперед
-		SWITCHSIGNAL(PORTC, FRELAY);
+		SWITCHSIGNAL(PORTA, FRELAY);
 		// Переключение сигнала для реле отвечающего за движение назад
-		SWITCHSIGNAL(PORTC, RRELAY);
-		// Смена чека
-		is_in_reverse != is_in_reverse;
+		SWITCHSIGNAL(PORTA, RRELAY);
 	}
 
 	// Проверка и работа с кнопкой включения и выключения двигателя
-	if (CHECKBUTTON(PIND, RBUTTON))
+	if (CHECKBUTTON(PINB, RBUTTON))
 	{
 		// Переключение сигнала для реле отвечающего за включение и выключение двигателя
-		SWITCHSIGNAL(PORTC, ONOFFRELAY);
-		// Смена чека
-		is_off != is_off;
+		SWITCHSIGNAL(PORTA, ONOFFRELAY);
 	}
 
 	_delay_ms(50);					// антидребезг
@@ -59,31 +45,27 @@ int main(void)
 {
 	// Подтягивание пинов для кнопок
 	// Кнопка вкл/выкл двиг.
-	DDRD &= ~(1 << ONOFFBUTTON);
-	PORTD |= (1 << ONOFFBUTTON);
+	DDRB &= ~(1 << ONOFFBUTTON);
 	// Кнопка переключения рев. двиг.
-	DDRD &= ~(1 << RBUTTON);
-	PORTD |= (1 << RBUTTON);
+	DDRB &= ~(1 << RBUTTON);
+	PORTB = 0;
 	
 	// Пины для реле
 	// Пин для движения вперед
-	DDRC |= (1 << FRELAY);
-	PORTC &= ~(1 << FRELAY);
+	DDRA |= (1 << FRELAY);
+	PORTA &= ~(1 << FRELAY);
 	// Пин для движения назад
-	DDRC |= (1 << RRELAY);
-	PORTC &= ~(1 << RRELAY);
+	DDRA |= (1 << RRELAY);
+	PORTA &= ~(1 << RRELAY);
 	// Пин для вкл/выкл двигателя
-	DDRC |= (1 << ONOFFRELAY);
-	PORTC &= ~(1 << ONOFFRELAY);
+	DDRA |= (1 << ONOFFRELAY);
+	PORTA &= ~(1 << ONOFFRELAY);
+	PORTA = 0;
 
 	// Настройка прерываний
-	// GIMSK |= (1 << PCIE);		 	// Разрешаем прерывания PCINT0 
-	// PCMSK |= (1 << ONOFFBUTTON); 	// Разрешаем по маске прерывания на ногах кнопки
-	// PCMSK |= (1 << RBUTTON);     	// Разрешаем по маске прерывания на ногах кнопки
-
-	SREG |= (1 << 7);
-	GICR |= (1 << 6);
-	MCUCR |= (1 << 1);
+	GIMSK |= (1 << PCIE1); // Разрешаем внешние прерывания.
+	PCMSK1 |= (1 << ONOFFBUTTON);
+	PCMSK1 |= (1 << RBUTTON); // Разрешаем по маске прерывания на ногак кнопок
 
 	sei();					 		// Разрешаем прерывания глобально
 	while (1)
