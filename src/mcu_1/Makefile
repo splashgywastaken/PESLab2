@@ -11,14 +11,14 @@ all:
 	${OBJCOPY} -j .text -j .data -O ihex ${TARGET}.bin ${TARGET}.hex
 
 # Примеры для написания своих команд сборки
-# build_b3:
-# 	${CC} ${CFLAGS} -DLED1=PB1 -DLED2=PB2 -DBUTTON1=PB3 -o ${TARGET}.bin ${SRCS}
+build_b1:
+	${CC} ${CFLAGS} -o ${TARGET}.bin ${SRCS}
 
 # build_b4:
 # 	${CC} ${CFLAGS} -DBUTTON1=PB4 -o ${TARGET}.bin ${SRCS}
 
-# objcoy:
-# 	${OBJCOPY} -j .text -j .data -O ihex ${TARGET}.bin ${TARGET}.hex
+objcopy:
+	${OBJCOPY} -j .text -j .data -O ihex ${TARGET}.bin ${TARGET}.hex
 
 clean:
 	rm -f ../../build/mcu_1/*.bin ../../build/mcu_1/*.hex
