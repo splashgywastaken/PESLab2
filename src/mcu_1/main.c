@@ -103,7 +103,7 @@ int main(void)
 			SWITCHSIGNAL(PORTA, FRELAY);
 			_delay_ms(100);
 			SWITCHSIGNAL(PORTA, RRELAY);
-			_delay_ms(500);
+			_delay_ms(1000);
 
 			// if (is_moving_backwards == 0)
 			// {
@@ -129,7 +129,7 @@ int main(void)
 		if (CHECKBUTTON(PINB, ONOFFBUTTON))
 		{
 			SWITCHSIGNAL(PORTA, ONOFFRELAY);
-			_delay_ms(500);
+			_delay_ms(1000);
 
 			// if (is_on == 0)
 			// {

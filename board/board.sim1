@@ -1,14 +1,12 @@
 <circuit version="1.0.0-SR0" rev="1320" stepSize="1000000" stepsPS="1000000" NLsteps="100000" reaStep="1000000" animate="1" >
 
-<item itemtype="Seven Segment" CircId="Seven Segment-4" mainComp="false" Show_id="true" Show_Val="false" Pos="-116,-492" rotation="0" hflip="1" vflip="1" label="Speed" idLabPos="-14,-45" labelrot="0" valLabPos="0,0" valLabRot="0" NumDisplays="4 _7seg" Color="Green" Vertical_Pins="false" CommonCathode="true" Threshold="2.4 V" MaxCurrent="0.02 A" Resistance="1 Ω" />
-
 <item itemtype="Led" CircId="Led-8" mainComp="false" Show_id="true" Show_Val="false" Pos="-540,224" rotation="0" hflip="-1" vflip="1" label="On/Off" idLabPos="12,-24" labelrot="0" valLabPos="0,0" valLabRot="0" Color="Green" Grounded="false" Threshold="1 V" MaxCurrent="0.1 A" Resistance="21 Ω" />
 
 <item itemtype="Led" CircId="Led-10" mainComp="false" Show_id="true" Show_Val="false" Pos="-540,188" rotation="0" hflip="-1" vflip="1" label="R" idLabPos="0,-23" labelrot="0" valLabPos="0,0" valLabRot="0" Color="Orange" Grounded="false" Threshold="1 V" MaxCurrent="0.1 A" Resistance="100 Ω" />
 
 <item itemtype="DcMotor" CircId="DcMotor-530" mainComp="false" Show_id="true" Show_Val="false" Pos="-448,-8" rotation="0" hflip="1" vflip="1" label="DcMotor-530" idLabPos="-22,-48" labelrot="0" valLabPos="0,0" valLabRot="0" RPM_Nominal="60 _RPM" Volt_Nominal="12 V" Resistance="100 Ω" />
 
-<item itemtype="TextComponent" CircId="TextComponent-533" mainComp="false" Show_id="false" Show_Val="false" Pos="-304,-580" rotation="0" hflip="1" vflip="1" label="TextComponent-533" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Margin="5 _Pixels" Border="1 _Pixels" Opacity="1" Font="Helvetica [Cronyx]" Font_Size="10 _Pixels" Fixed_Width="false" Text="Набор компонентов для работы с 2ой по заданию платой" />
+<item itemtype="TextComponent" CircId="TextComponent-533" mainComp="false" Show_id="false" Show_Val="false" Pos="-304,-600" rotation="0" hflip="1" vflip="1" label="TextComponent-533" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Margin="5 _Pixels" Border="1 _Pixels" Opacity="1" Font="Helvetica [Cronyx]" Font_Size="10 _Pixels" Fixed_Width="false" Text="Набор компонентов для работы с 2ой по заданию платой" />
 
 <item itemtype="TextComponent" CircId="TextComponent-534" mainComp="false" Show_id="false" Show_Val="false" Pos="-768,-308" rotation="0" hflip="1" vflip="1" label="TextComponent-534" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Margin="5 _Pixels" Border="1 _Pixels" Opacity="1" Font="Helvetica [Cronyx]" Font_Size="10 _Pixels" Fixed_Width="false" Text="Набор компонентов для работы с 1ой по заданию платой" />
 
@@ -38,9 +36,7 @@
 
 <item itemtype="Push" CircId="Push-873" mainComp="false" Show_id="true" Show_Val="false" Pos="-620,-200" rotation="0" hflip="1" vflip="1" label="On/Off" idLabPos="-18,20" labelrot="0" valLabPos="-16,20" valLabRot="0" Norm_Close="false" Poles="1 _Poles" />
 
-<item itemtype="SerialPort" CircId="SerialPort-889" mainComp="false" Show_id="false" Show_Val="false" Pos="-380,-300" rotation="0" hflip="1" vflip="1" label="SerialPort-889" idLabPos="-20,-32" labelrot="0" valLabPos="-16,20" valLabRot="0" Baudrate="9600 _Bauds" DataBits="8 _Bits" StopBits="1 _Bits" />
-
-<item itemtype="MCU" CircId="mega8-914" mainComp="false" Show_id="true" Show_Val="false" Pos="-260,-516" rotation="0" hflip="1" vflip="1" label="mega8-914" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" Frequency="16 MHz" Auto_Load="false" Rst_enabled="false" Ext_Osc="false" Wdt_enabled="false" />
+<item itemtype="SerialPort" CircId="SerialPort-889" mainComp="false" Show_id="false" Show_Val="false" Pos="-344,-300" rotation="0" hflip="1" vflip="1" label="SerialPort-889" idLabPos="-20,-32" labelrot="0" valLabPos="-16,20" valLabRot="0" Baudrate="9600 _Bauds" DataBits="8 _Bits" StopBits="1 _Bits" />
 
 <item itemtype="RelaySPST" CircId="RelaySPST-969" mainComp="false" Show_id="true" Show_Val="false" Pos="-228,-148" rotation="0" hflip="1" vflip="1" label="RRELAY" idLabPos="-16,8" labelrot="0" valLabPos="-16,6" valLabRot="0" Norm_Close="false" DT="false" Poles="1 _Poles" IOn="0.02 A" IOff="0.01 A" Inductance="0.1 H" Rcoil="1 Ω" AutoStep="0 _Steps" />
 
@@ -60,7 +56,7 @@
 
 <item itemtype="Led" CircId="Led-991" mainComp="false" Show_id="true" Show_Val="false" Pos="-224,-76" rotation="0" hflip="-1" vflip="1" label="R" idLabPos="0,-23" labelrot="0" valLabPos="0,0" valLabRot="0" Color="Orange" Grounded="false" Threshold="1 V" MaxCurrent="0.1 A" Resistance="100 Ω" />
 
-<item itemtype="Rail" CircId="Rail-993" mainComp="false" ShowProp="Voltage" Show_id="false" Show_Val="true" Pos="-456,-124" rotation="180" hflip="-1" vflip="1" label="Rail-993" idLabPos="-16,-24" labelrot="0" valLabPos="-9,-8" valLabRot="180" Voltage="12 V" />
+<item itemtype="Rail" CircId="Rail-993" mainComp="false" ShowProp="Voltage" Show_id="false" Show_Val="true" Pos="-472,-124" rotation="180" hflip="-1" vflip="1" label="Rail-993" idLabPos="-16,-24" labelrot="0" valLabPos="-9,-8" valLabRot="180" Voltage="12 V" />
 
 <item itemtype="RelaySPST" CircId="RelaySPST-1030" mainComp="false" Show_id="false" Show_Val="false" Pos="-348,-108" rotation="0" hflip="1" vflip="1" label="RelaySPST-1030" idLabPos="-16,8" labelrot="0" valLabPos="-16,6" valLabRot="0" Norm_Close="false" DT="false" Poles="1 _Poles" IOn="0.02 A" IOff="0.01 A" Inductance="0.1 H" Rcoil="1 Ω" AutoStep="0 _Steps" />
 
@@ -71,6 +67,16 @@
 <item itemtype="MCU" CircId="tiny84-1339" mainComp="false" Show_id="false" Show_Val="false" Pos="-532,-260" rotation="0" hflip="1" vflip="1" label="tiny84-1339" idLabPos="-17,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" Frequency="16 MHz" Program="../build/mcu_1/mcu_1_build.hex" Auto_Load="false" Rst_enabled="false" Ext_Osc="false" Wdt_enabled="false" />
 
 <item itemtype="Ground" CircId="Ground-1542" mainComp="false" Show_id="false" Show_Val="false" Pos="-696,-244" rotation="90" hflip="1" vflip="-1" label="Ground-1542" idLabPos="-16,8" labelrot="0" valLabPos="-16,20" valLabRot="0" />
+
+<item itemtype="Fixed Voltage" CircId="Fixed Voltage-1630" mainComp="false" Show_id="true" Show_Val="false" Pos="-352,-392" rotation="0" hflip="1" vflip="1" label="Подключить в случае работы в пол силы" idLabPos="-98.1028,7.00251" labelrot="0" valLabPos="-16,8" valLabRot="0" Out="false" Voltage="5 V" />
+
+<item itemtype="ResistorDip" CircId="ResistorDip-1631" mainComp="false" ShowProp="Resistance" Show_id="false" Show_Val="true" Pos="-200,-500" rotation="0" hflip="1" vflip="1" label="ResistorDip-1631" idLabPos="-24,-40" labelrot="0" valLabPos="5,-26" valLabRot="90" Resistance="1 Ω" Size="10 Resist." />
+
+<item itemtype="Seven Segment" CircId="Seven Segment-1632" mainComp="false" Show_id="true" Show_Val="false" Pos="-80,-500" rotation="0" hflip="1" vflip="1" label="Seven Segment-1632" idLabPos="-14,-45" labelrot="0" valLabPos="0,0" valLabRot="0" NumDisplays="3 7seg" Color="Yellow" Vertical_Pins="false" CommonCathode="true" Threshold="2.4 V" MaxCurrent="0.02 A" Resistance="1 Ω" />
+
+<item itemtype="MCU" CircId="tiny84-1634" mainComp="false" Show_id="true" Show_Val="false" Pos="-320,-540" rotation="0" hflip="1" vflip="1" label="tiny84-1634" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" Frequency="16 MHz" Program="../../2/mcu_2_build.hex" Auto_Load="false" Rst_enabled="false" Ext_Osc="false" Wdt_enabled="false" />
+
+<item itemtype="Or Gate" CircId="Or Gate-1661" mainComp="false" Show_id="false" Show_Val="false" Pos="-108,-380" rotation="-90" hflip="1" vflip="1" label="Or Gate-1661" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Num_Inputs="2" Inverted="false" Open_Collector="false" Input_High_V="2.5 V" Input_Low_V="2.5 V" Input_Imped="1e+09 Ω" Out_High_V="5 V" Out_Low_V="0 V" Out_Imped="40 Ω" initHigh="false" Tpd_ps="10000 ps" Tr_ps="3000 ps" Tf_ps="4000 ps" />
 
 <item itemtype="Node" CircId="Node-682" mainComp="false" Pos="-604,128" />
 
@@ -117,6 +123,10 @@
 <item itemtype="Node" CircId="Node-1449" mainComp="false" Pos="-184,-228" />
 
 <item itemtype="Node" CircId="Node-1452" mainComp="false" Pos="-172,-228" />
+
+<item itemtype="Node" CircId="Node-1662" mainComp="false" Pos="-172,-268" />
+
+<item itemtype="Node" CircId="Node-1665" mainComp="false" Pos="-60,-268" />
 
 <item itemtype="Connector" uid="connector-1543" startpinid="Node-682-2" endpinid="RelaySPST-663-pinP2" pointList="-604,128,-604,40,-560,40" />
 
@@ -180,30 +190,6 @@
 
 <item itemtype="Connector" uid="connector-1573" startpinid="Rail-655-outnod" endpinid="Switch-660-pinP0" pointList="-772,152,-748,152" />
 
-<item itemtype="Connector" uid="connector-1574" startpinid="mega8-914-PORTC6" endpinid="Seven Segment-4-pin_a" pointList="-268,-508,-284,-508,-284,-536,-200,-536,-200,-516,-140,-516" />
-
-<item itemtype="Connector" uid="connector-1575" startpinid="mega8-914-PORTC5" endpinid="Seven Segment-4-pin_b" pointList="-220,-508,-140,-508" />
-
-<item itemtype="Connector" uid="connector-1576" startpinid="mega8-914-PORTC4" endpinid="Seven Segment-4-pin_c" pointList="-220,-500,-140,-500" />
-
-<item itemtype="Connector" uid="connector-1577" startpinid="mega8-914-PORTC3" endpinid="Seven Segment-4-pin_d" pointList="-220,-492,-140,-492" />
-
-<item itemtype="Connector" uid="connector-1578" startpinid="mega8-914-PORTC2" endpinid="Seven Segment-4-pin_e" pointList="-220,-484,-140,-484" />
-
-<item itemtype="Connector" uid="connector-1579" startpinid="mega8-914-PORTC1" endpinid="Seven Segment-4-pin_f" pointList="-220,-476,-140,-476" />
-
-<item itemtype="Connector" uid="connector-1580" startpinid="mega8-914-PORTC0" endpinid="Seven Segment-4-pin_g" pointList="-220,-468,-140,-468" />
-
-<item itemtype="Connector" uid="connector-1581" startpinid="mega8-914-PORTB0" endpinid="Seven Segment-4-pin_commond" pointList="-268,-404,-280,-404,-280,-388,-12,-388,-12,-460" />
-
-<item itemtype="Connector" uid="connector-1582" startpinid="mega8-914-PORTB1" endpinid="Seven Segment-4-pin_commonc" pointList="-220,-404,-44,-404,-44,-460" />
-
-<item itemtype="Connector" uid="connector-1583" startpinid="mega8-914-PORTB2" endpinid="Seven Segment-4-pin_commonb" pointList="-220,-412,-76,-412,-76,-460" />
-
-<item itemtype="Connector" uid="connector-1584" startpinid="mega8-914-PORTB3" endpinid="Seven Segment-4-pin_commona" pointList="-220,-420,-108,-420,-108,-460" />
-
-<item itemtype="Connector" uid="connector-1585" startpinid="mega8-914-PORTB4" endpinid="Seven Segment-4-pin_dot" pointList="-220,-428,-124,-428,-124,-460" />
-
 <item itemtype="Connector" uid="connector-1586" startpinid="Node-720-2" endpinid="Node-682-0" pointList="-684,152,-604,152,-604,128" />
 
 <item itemtype="Connector" uid="connector-1587" startpinid="Node-980-2" endpinid="Node-987-0" pointList="76,-204,76,-124" />
@@ -224,7 +210,7 @@
 
 <item itemtype="Connector" uid="connector-1595" startpinid="Node-987-2" endpinid="Node-975-0" pointList="76,-124,76,-116" />
 
-<item itemtype="Connector" uid="connector-1596" startpinid="Node-971-2" endpinid="DcMotor-978-rPin" pointList="-60,-228,-60,-268,-76,-268" />
+<item itemtype="Connector" uid="connector-1596" startpinid="Node-971-2" endpinid="Node-1665-0" pointList="-60,-228,-60,-268" />
 
 <item itemtype="Connector" uid="connector-1597" startpinid="Led-984-lPin" endpinid="Or Gate-982-out" pointList="-208,-44,-116,-44,-116,-72" />
 
@@ -242,7 +228,7 @@
 
 <item itemtype="Connector" uid="connector-1604" startpinid="RelaySPST-969-pinP2" endpinid="Node-1036-0" pointList="-244,-164,-264,-164,-264,-124,-296,-124" />
 
-<item itemtype="Connector" uid="connector-1605" startpinid="Rail-993-outnod" endpinid="RelaySPST-1030-pinP2" pointList="-440,-124,-364,-124" />
+<item itemtype="Connector" uid="connector-1605" startpinid="Rail-993-outnod" endpinid="RelaySPST-1030-pinP2" pointList="-456,-124,-364,-124" />
 
 <item itemtype="Connector" uid="connector-1606" startpinid="RelaySPST-1030-switch0pinN" endpinid="Node-1036-1" pointList="-332,-124,-296,-124" />
 
@@ -268,8 +254,6 @@
 
 <item itemtype="Connector" uid="connector-1617" startpinid="tiny84-1339-PORTA1" endpinid="RelaySPST-969-inductor-lPin" pointList="-492,-236,-432,-236,-432,-204,-328,-204,-328,-148,-244,-148" />
 
-<item itemtype="Connector" uid="connector-1618" startpinid="tiny84-1339-PORTA4" endpinid="mega8-914-PORTD1" pointList="-492,-212,-452,-212,-452,-492,-268,-492" />
-
 <item itemtype="Connector" uid="connector-1619" startpinid="Push-873-switch0pinN" endpinid="tiny84-1339-PORTB1" pointList="-604,-200,-584,-200,-584,-236,-540,-236" />
 
 <item itemtype="Connector" uid="connector-1620" startpinid="tiny84-1339-PORTA2" endpinid="RelaySPST-1030-inductor-lPin" pointList="-492,-228,-440,-228,-440,-196,-372,-196,-372,-108,-364,-108" />
@@ -284,12 +268,66 @@
 
 <item itemtype="Connector" uid="connector-1625" startpinid="Node-1449-1" endpinid="Node-1452-1" pointList="-184,-228,-172,-228" />
 
-<item itemtype="Connector" uid="connector-1626" startpinid="Node-1452-2" endpinid="DcMotor-978-lPin" pointList="-172,-228,-172,-268,-156,-268" />
+<item itemtype="Connector" uid="connector-1626" startpinid="Node-1452-2" endpinid="Node-1662-0" pointList="-172,-228,-172,-268" />
 
 <item itemtype="Connector" uid="connector-1627" startpinid="Ground-869-Gnd" endpinid="Push-873-pinP0" pointList="-680,-200,-636,-200" />
 
 <item itemtype="Connector" uid="connector-1628" startpinid="Ground-1542-Gnd" endpinid="Push-871-pinP0" pointList="-680,-244,-636,-244" />
 
-<item itemtype="Connector" uid="connector-1629" startpinid="tiny84-1339-PORTA3" endpinid="mega8-914-PORTD0" pointList="-492,-220,-460,-220,-460,-500,-268,-500" />
+<item itemtype="Connector" uid="Connector-1635" startpinid="Seven Segment-1632-pin_commonb" endpinid="ResistorDip-1631-resistor8-ePin17" pointList="-40,-468,-40,-452,-120,-452,-120,-460,-184,-460" />
+
+<item itemtype="Connector" uid="Connector-1636" startpinid="ResistorDip-1631-resistor9-ePin19" endpinid="Seven Segment-1632-pin_commonc" pointList="-184,-452,-128,-452,-128,-444,-8,-444,-8,-468" />
+
+<item itemtype="Connector" uid="Connector-1637" startpinid="ResistorDip-1631-resistor1-ePin3" endpinid="Seven Segment-1632-pin_b" pointList="-184,-516,-104,-516" />
+
+<item itemtype="Connector" uid="Connector-1638" startpinid="ResistorDip-1631-resistor0-ePin1" endpinid="Seven Segment-1632-pin_a" pointList="-184,-524,-104,-524" />
+
+<item itemtype="Connector" uid="Connector-1639" startpinid="Fixed Voltage-1630-outnod" endpinid="tiny84-1634-PORTB3" pointList="-336,-392,-320,-392,-320,-428,-356,-428,-356,-508,-328,-508" />
+
+<item itemtype="Connector" uid="Connector-1640" startpinid="ResistorDip-1631-resistor4-ePin9" endpinid="Seven Segment-1632-pin_e" pointList="-184,-492,-104,-492" />
+
+<item itemtype="Connector" uid="Connector-1641" startpinid="tiny84-1634-PORTA1" endpinid="ResistorDip-1631-resistor1-ePin2" pointList="-280,-516,-216,-516" />
+
+<item itemtype="Connector" uid="Connector-1642" startpinid="ResistorDip-1631-resistor6-ePin12" endpinid="tiny84-1634-PORTA6" pointList="-216,-476,-276,-476,-276,-472,-332,-472,-332,-484,-328,-484" />
+
+<item itemtype="Connector" uid="Connector-1643" startpinid="ResistorDip-1631-resistor8-ePin16" endpinid="tiny84-1634-PORTB1" pointList="-216,-460,-364,-460,-364,-516,-328,-516" />
+
+<item itemtype="Connector" uid="Connector-1644" startpinid="tiny84-1634-PORTA2" endpinid="ResistorDip-1631-resistor2-ePin4" pointList="-280,-508,-216,-508" />
+
+<item itemtype="Connector" uid="Connector-1646" startpinid="tiny84-1634-PORTA3" endpinid="ResistorDip-1631-resistor3-ePin6" pointList="-280,-500,-216,-500" />
+
+<item itemtype="Connector" uid="Connector-1647" startpinid="ResistorDip-1631-resistor5-ePin11" endpinid="Seven Segment-1632-pin_f" pointList="-184,-484,-104,-484" />
+
+<item itemtype="Connector" uid="Connector-1648" startpinid="tiny84-1634-PORTA5" endpinid="ResistorDip-1631-resistor5-ePin10" pointList="-280,-484,-216,-484" />
+
+<item itemtype="Connector" uid="Connector-1649" startpinid="ResistorDip-1631-resistor7-ePin14" endpinid="tiny84-1634-PORTB0" pointList="-216,-468,-348,-468,-348,-524,-328,-524" />
+
+<item itemtype="Connector" uid="Connector-1650" startpinid="ResistorDip-1631-resistor7-ePin15" endpinid="Seven Segment-1632-pin_commona" pointList="-184,-468,-112,-468,-112,-456,-72,-456,-72,-468" />
+
+<item itemtype="Connector" uid="Connector-1651" startpinid="Seven Segment-1632-pin_g" endpinid="ResistorDip-1631-resistor6-ePin13" pointList="-104,-476,-184,-476" />
+
+<item itemtype="Connector" uid="Connector-1652" startpinid="tiny84-1634-PORTA0" endpinid="ResistorDip-1631-resistor0-ePin0" pointList="-280,-524,-216,-524" />
+
+<item itemtype="Connector" uid="Connector-1653" startpinid="ResistorDip-1631-resistor9-ePin18" endpinid="tiny84-1634-PORTB2" pointList="-216,-452,-336,-452,-336,-500,-328,-500" />
+
+<item itemtype="Connector" uid="Connector-1654" startpinid="ResistorDip-1631-resistor3-ePin7" endpinid="Seven Segment-1632-pin_d" pointList="-184,-500,-104,-500" />
+
+<item itemtype="Connector" uid="Connector-1655" startpinid="ResistorDip-1631-resistor2-ePin5" endpinid="Seven Segment-1632-pin_c" pointList="-184,-508,-104,-508" />
+
+<item itemtype="Connector" uid="Connector-1656" startpinid="tiny84-1634-PORTA4" endpinid="ResistorDip-1631-resistor4-ePin8" pointList="-280,-492,-216,-492" />
+
+<item itemtype="Connector" uid="Connector-1659" startpinid="SerialPort-889-pin0" endpinid="tiny84-1339-PORTB3" pointList="-384,-308,-412,-308,-412,-280,-548,-280,-548,-228,-540,-228" />
+
+<item itemtype="Connector" uid="Connector-1660" startpinid="SerialPort-889-pin1" endpinid="tiny84-1339-PORTB2" pointList="-384,-292,-404,-292,-404,-276,-556,-276,-556,-220,-540,-220" />
+
+<item itemtype="Connector" uid="Connector-1663" startpinid="Node-1662-2" endpinid="DcMotor-978-lPin" pointList="-172,-268,-156,-268" />
+
+<item itemtype="Connector" uid="Connector-1664" startpinid="Node-1662-1" endpinid="Or Gate-1661-in0" pointList="-172,-268,-172,-364,-112,-364" />
+
+<item itemtype="Connector" uid="Connector-1666" startpinid="Node-1665-2" endpinid="DcMotor-978-rPin" pointList="-60,-268,-76,-268" />
+
+<item itemtype="Connector" uid="Connector-1667" startpinid="Node-1665-1" endpinid="Or Gate-1661-in1" pointList="-60,-268,-60,-364,-104,-364" />
+
+<item itemtype="Connector" uid="Connector-1668" startpinid="Or Gate-1661-out" endpinid="tiny84-1634-PORTA7" pointList="-108,-396,-108,-428,-312,-428,-312,-444,-340,-444,-340,-492,-328,-492" />
 
 </circuit>
