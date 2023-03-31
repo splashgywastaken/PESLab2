@@ -1,146 +1,141 @@
 #include <avr/io.h>
 #include <avr/interrupt.h>
 #include <util/delay.h>
+#include "../config.h"
 
+// Макрос, устанавливающий значение для бита BIT на порту PORT = 0
+#define CLEAR_BIT(PORT, BIT) (PORT &= ~(1 << BIT))
+// Макрос, устанавливающий значение для бита BIT на порту PORT = 1
+#define SET_BIT(PORT, BIT) (PORT |= (1 << BIT))
 // Переключает сигнал для порта 
 #define SWITCHSIGNAL(PORTX, PORTXN) ((PORTX) ^= (1 << (PORTXN)))
-// Проверяет нажата ли данная кнопка (пуст ли бит)
-#define CHECKBUTTON(PINX, BUTTON) ((PINX & (1 << BUTTON)) == 0)
-// Кнопка переключения режима работы двигателя
-#define RBUTTON PORTB0
-// Кнопка включения/выключения (стоп/старт)
-#define ONOFFBUTTON PORTB1
-// Реле для движения вперед
-#define FRELAY PORTA0
-// Реле для движения назад
-#define RRELAY PORTA1
-// Реле для включения/выключения двигателя
-#define ONOFFRELAY PORTA2
+// Проверяет сигнал порта на пустоту бита
+#define CHECKSIGNAL(PINX, BUTTON) ((PINX & (1 << BUTTON)) == 0)
 
-// static uint8_t is_moving_backwards = 0;
-// static uint8_t is_on = 1;
+volatile uint8_t is_listening = 0;
+volatile uint8_t seconds = 0;
+volatile uint8_t signal_count = 0;
 
 // Обработчик прерывания PCINT0
 ISR(PCINT0_vect)
 {
 	// Проверка и работа с кнопкой переключения режимов работы двигателя
-	if (CHECKBUTTON(PINB, RBUTTON))
+	if (CHECKSIGNAL(PINB, RBUTTON))
 	{
-		SWITCHSIGNAL(PORTA, FRELAY);
-		SWITCHSIGNAL(PORTA, RRELAY);
+		SWITCHSIGNAL(PORTB, FRELAY);
+		SWITCHSIGNAL(PORTB, RRELAY);
 		_delay_ms(50);
-
-		// if (is_moving_backwards == 0)
-		// {
-		// 	// SWITCHSIGNAL(PORTA, FRELAY);
-		// 	// is_moving_backwards = 1;
-
-		// 	PORTA &= ~(1 << FRELAY);
-		// 	PORTA |= (1 << RRELAY);
-		// 	is_moving_backwards = 1;
-		// } else 
-		// {
-		// 	// SWITCHSIGNAL(PORTA, FRELAY);
-		// 	// is_moving_backwards = 0;
-
-		// 	PORTA |= (1 << FRELAY);
-		// 	PORTA &= ~(1 << RRELAY);
-		// 	is_moving_backwards = 0;
-		// }
-		// _delay_ms(50);	// антидребезг
 	}
 
 	// Проверка и работа с кнопкой включения и выключения двигателя
-	if (CHECKBUTTON(PINB, ONOFFBUTTON))
+	if (CHECKSIGNAL(PINB, ONOFFBUTTON))
 	{
-		SWITCHSIGNAL(PORTA, ONOFFRELAY);
+		SWITCHSIGNAL(PORTB, ONOFFRELAY);
 		_delay_ms(50);
-
-		// if (is_on == 0)
-		// {
-		// 	PORTA |= (1 << ONOFFRELAY);
-		// 	is_on = 1;
-		// } else 
-		// {
-		// 	PORTA &= ~(1 << ONOFFRELAY);
-		// 	is_on = 0;	
-		// }
-		// _delay_ms(50);
 	}
+}
+
+ISR(TIMER0_OVF_vect)
+{
+    // увеличиваем счетчик секунд
+    seconds++;
+    if (is_listening == 1 && seconds > 2)
+    {
+        if (signal_count == 1)
+        {
+			// Старт 1
+			SET_BIT(PORTB, ONOFFRELAY);
+        }
+        if (signal_count == 2)
+        {
+			// Стоп 5
+			CLEAR_BIT(PORTB, ONOFFRELAY);
+        }
+        if (signal_count == 3)
+        {
+			// Изменить направление 21
+			SWITCHSIGNAL(PORTB, FRELAY);
+			SWITCHSIGNAL(PORTB, RRELAY);
+        }
+        is_listening = 0;
+        signal_count = 0;
+    }
 }
 
 // Основное тело программы
 int main(void)
-{
-	// Подтягивание пинов для кнопок
-	// Кнопка вкл/выкл двиг.
-	// Кнопка переключения рев. двиг.
-	// DDRB &= ~((1 << ONOFFBUTTON) | (1 << RBUTTON));
-	// PORTB |= ((1 << ONOFFBUTTON) | (1 << RBUTTON));
-	
-	DDRB &= ~((1 << PB0) | (1 << PB1));  // установка входного режима на портах B0 и B1
-	PORTB |= (1 << PB0) | (1 << PB1);   // включение подтягивающих резисторов на портах B0 и B1
-
+{	
+	// установка входного режима 
+	// на портах ONOFFBUTTON, RBUTTON, INPUT1
+	DDRB &= ~(
+		(1 << ONOFFBUTTON) | 
+		(1 << RBUTTON) | 
+		(1 << SERIAL_INPUT)
+		);
+	// включение подтягивающих резисторов 
+	// на портах ONOFFBUTTON, RBUTTON, INPUT1
+	PORTB |= 
+		(1 << ONOFFBUTTON) |
+		(1 << RBUTTON) |
+		(1 << SERIAL_INPUT);  
 
 	// Пины для реле
 	// Пин для движения вперед
 	// Пин для движения назад
 	// Пин для вкл/выкл двигателя
-	DDRA |= ((1 << FRELAY) | (1 << RRELAY) | (1 << ONOFFRELAY));
-	PORTA |= ((1 << FRELAY) | (1 << ONOFFRELAY));
+	DDRB |= (
+		(1 << FRELAY) |
+		(1 << RRELAY) |
+		(1 << ONOFFRELAY)
+		  );
+	PORTB |= ((1 << FRELAY) | (1 << ONOFFRELAY));
 
-	// Настройка прерываний
-	PCMSK0 |= (1 << PCINT0) | (1 << PCINT1);  // разрешение прерываний на портах B0 и B1
-	GIMSK |= (1 << PCIE0);                   // разрешение прерываний по изменению состояния на портах B0-B3
-	// Разрешаем прерывания глобально
-	sei();
+	// Настройка таймера
+	TCCR0B |= (1 << CS02) | (1 << CS00); // устанавливаем предделитель 1024
+    TIMSK |= (1 << TOIE0);
+    TCNT0 = 0; // устанавливаем начальное значение счетчика
+
+	// // Настройка прерываний
+	// GIMSK |= (1<<PCIE); // Разрешаем внешние прерывания PCINT0.
+	// PCMSK |= (1<<ONOFFBUTTON) | (1<<RBUTTON); // Разрешаем по маске прерывания
+	sei(); // Разрешаем прерывания глобально: SREG |= (1<<SREG_I)
 
 	while (1)
 	{
 		// Проверка и работа с кнопкой переключения режимов работы двигателя
-		if (CHECKBUTTON(PINB, RBUTTON))
+		if (CHECKSIGNAL(PINB, RBUTTON))
 		{
-			SWITCHSIGNAL(PORTA, FRELAY);
+			SWITCHSIGNAL(PORTB, FRELAY);
 			_delay_ms(100);
-			SWITCHSIGNAL(PORTA, RRELAY);
+			SWITCHSIGNAL(PORTB, RRELAY);
 			_delay_ms(1000);
-
-			// if (is_moving_backwards == 0)
-			// {
-			// 	// SWITCHSIGNAL(PORTA, FRELAY);
-			// 	// is_moving_backwards = 1;
-
-			// 	PORTA &= ~(1 << FRELAY);
-			// 	PORTA |= (1 << RRELAY);
-			// 	is_moving_backwards = 1;
-			// } else 
-			// {
-			// 	// SWITCHSIGNAL(PORTA, FRELAY);
-			// 	// is_moving_backwards = 0;
-
-			// 	PORTA |= (1 << FRELAY);
-			// 	PORTA &= ~(1 << RRELAY);
-			// 	is_moving_backwards = 0;
-			// }
-			// _delay_ms(50);	// антидребезг
 		}
 
 		// Проверка и работа с кнопкой включения и выключения двигателя
-		if (CHECKBUTTON(PINB, ONOFFBUTTON))
+		if (CHECKSIGNAL(PINB, ONOFFBUTTON))
 		{
-			SWITCHSIGNAL(PORTA, ONOFFRELAY);
+			SWITCHSIGNAL(PORTB, ONOFFRELAY);
 			_delay_ms(1000);
+		}
 
-			// if (is_on == 0)
-			// {
-			// 	PORTA |= (1 << ONOFFRELAY);
-			// 	is_on = 1;
-			// } else 
-			// {
-			// 	PORTA &= ~(1 << ONOFFRELAY);
-			// 	is_on = 0;	
-			// }
-			// _delay_ms(50);
+		if (CHECKSIGNAL(PINB, SERIAL_INPUT))
+		{
+			if (is_listening == 0)
+			{
+				is_listening = 1;
+				seconds = 0;
+				while (is_listening == 1 && CHECKSIGNAL(PINB, SERIAL_INPUT))
+				{
+
+				}
+			} else 
+			{
+				signal_count++;
+				while (is_listening == 1 && CHECKSIGNAL(PINB, SERIAL_INPUT))
+				{
+
+				}
+			}
 		}
 	}
 }
