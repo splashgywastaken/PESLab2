@@ -1,0 +1,27 @@
+export MCU_1=attiny45
+export MCU_1_F_CPU=1200000
+export MCU_2=attiny84
+export MCU_2_F_CPU=1200000
+
+export ONOFFBUTTON=PORTB4
+export SERIAL_INPUT=PORTB5
+export RBUTTON=PORTB3
+export FRELAY=PORTB2
+export RRELAY=PORTB1
+export ONOFFRELAY=PORTB0
+
+
+export SEG_A=PA0
+export SEG_B=PA1
+export SEG_C=PA2
+export SEG_D=PA3
+export SEG_E=PA4
+export SEG_F=PA5
+export SEG_G=PA6
+
+export DIG1=PB0
+export DIG2=PB1
+export DIG3=PB2
+
+export INPORT50=PB3
+export INPORT75=PA7

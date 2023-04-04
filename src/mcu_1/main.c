@@ -1,7 +1,6 @@
 #include <avr/io.h>
 #include <avr/interrupt.h>
 #include <util/delay.h>
-#include "../config.h"
 
 // Макрос, устанавливающий значение для бита BIT на порту PORT = 0
 #define CLEAR_BIT(PORT, BIT) (PORT &= ~(1 << BIT))

@@ -1,19 +1,3 @@
-#define SEG_A PA0
-#define SEG_B PA1
-#define SEG_C PA2
-#define SEG_D PA3
-#define SEG_E PA4
-#define SEG_F PA5
-#define SEG_G PA6
-
-#define DIG1 PB0 // первый разряд (счет слева)
-#define DIG2 PB1 // второй разряд (счет слева)
-#define DIG3 PB2 // третий разряд (счет слева)
-
-
-#define INPORT50 PB3 // входной пин: 1, если скорость - 50%
-#define INPORT75 PA7 // входной пин: 1, если скорость - 75%
-
 #include <stdbool.h>
 #include <stdint.h>
 #include <avr/io.h>
