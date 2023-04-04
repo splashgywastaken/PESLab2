@@ -38,13 +38,13 @@
 
 <item itemtype="ResistorDip" CircId="ResistorDip-1631" mainComp="false" ShowProp="Resistance" Show_id="false" Show_Val="true" Pos="-376,104" rotation="0" hflip="1" vflip="1" label="ResistorDip-1631" idLabPos="-24,-40" labelrot="0" valLabPos="5,-26" valLabRot="90" Resistance="8 Ω" Size="10 Resist." />
 
-<item itemtype="Seven Segment" CircId="Seven Segment-1632" mainComp="false" Show_id="true" Show_Val="false" Pos="-256,104" rotation="0" hflip="1" vflip="1" label="Seven Segment-1632" idLabPos="-14,-45" labelrot="0" valLabPos="0,0" valLabRot="0" NumDisplays="3 7seg" Color="Yellow" Vertical_Pins="false" CommonCathode="true" Threshold="2.4 V" MaxCurrent="0.02 A" Resistance="1 Ω" />
+<item itemtype="Seven Segment" CircId="Seven Segment-1632" mainComp="false" Show_id="true" Show_Val="false" Pos="-256,104" rotation="0" hflip="1" vflip="1" label="Seven Segment-1632" idLabPos="-14,-45" labelrot="0" valLabPos="0,0" valLabRot="0" NumDisplays="3 7seg" Color="Yellow" Vertical_Pins="false" CommonCathode="true" Threshold="1 V" MaxCurrent="0.005 A" Resistance="0.5 Ω" />
 
-<item itemtype="MCU" CircId="tiny84-1634" mainComp="false" Show_id="true" Show_Val="false" Pos="-496,64" rotation="0" hflip="1" vflip="1" label="tiny84-1634" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" Frequency="16 MHz" Program="../../2/mcu_2_build.hex" Auto_Load="false" Rst_enabled="false" Ext_Osc="false" Wdt_enabled="false" />
+<item itemtype="MCU" CircId="tiny84-1634" mainComp="false" Show_id="true" Show_Val="false" Pos="-496,64" rotation="0" hflip="1" vflip="1" label="tiny84-1634" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" Frequency="16 MHz" Program="../build/mcu_2/mcu_2_build.hex" Auto_Load="false" Rst_enabled="false" Ext_Osc="false" Wdt_enabled="false" />
 
 <item itemtype="MCU" CircId="tiny45-1774" mainComp="false" Show_id="true" Show_Val="false" Pos="-536,-252" rotation="0" hflip="1" vflip="1" label="tiny45-1774" idLabPos="-16,-19" labelrot="0" valLabPos="-16,20" valLabRot="0" Frequency="16 MHz" Program="../build/mcu_1/mcu_1_build.hex" Auto_Load="false" Rst_enabled="false" Ext_Osc="false" Wdt_enabled="false" />
 
-<item itemtype="VarResistor" CircId="VarResistor-1788" mainComp="false" Show_id="false" Show_Val="false" Pos="-500,-124" rotation="0" hflip="1" vflip="1" label="VarResistor-1788" idLabPos="-16,-24" labelrot="0" valLabPos="-16,30" valLabRot="0" Min_Resistance="1 Ω" Max_Resistance="3 Ω" Value_Ohm="1 Ω" Dial_Step="1 Ω" />
+<item itemtype="VarResistor" CircId="VarResistor-1788" mainComp="false" Show_id="false" Show_Val="false" Pos="-500,-124" rotation="0" hflip="-1" vflip="1" label="VarResistor-1788" idLabPos="-16,-24" labelrot="0" valLabPos="-16,30" valLabRot="0" Min_Resistance="1 Ω" Max_Resistance="3 Ω" Value_Ohm="3 Ω" Dial_Step="1 Ω" />
 
 <item itemtype="TextComponent" CircId="TextComponent-2343" mainComp="false" Show_id="false" Show_Val="false" Pos="-452,180" rotation="0" hflip="1" vflip="1" label="TextComponent-2343" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Margin="5 _Pixels" Border="1 _Pixels" Opacity="1" Font="Helvetica [Cronyx]" Font_Size="10 _Pixels" Fixed_Width="false" Text="A7 - 100&#xa;B3 - 50" />
 
@@ -64,9 +64,9 @@
 
 <item itemtype="Voltimeter" CircId="Voltimeter-3016" mainComp="false" Show_id="false" Show_Val="false" Pos="-776,44" rotation="0" hflip="-1" vflip="1" label="Voltimeter-3016" idLabPos="-24,-40" labelrot="0" valLabPos="-16,20" valLabRot="0" />
 
-<item itemtype="Or Gate" CircId="Or Gate-3025" mainComp="false" Show_id="true" Show_Val="false" Pos="-652,-20" rotation="0" hflip="-1" vflip="1" label="50" idLabPos="5.58582,-25.3491" labelrot="0" valLabPos="-16,20" valLabRot="0" Num_Inputs="2" Inverted="false" Open_Collector="false" Input_High_V="6 V" Input_Low_V="3.1 V" Input_Imped="1e+09 Ω" Out_High_V="0 V" Out_Low_V="12 V" Out_Imped="40 Ω" initHigh="false" Tpd_ps="10000 ps" Tr_ps="3000 ps" Tf_ps="4000 ps" />
+<item itemtype="Or Gate" CircId="Or Gate-3025" mainComp="false" Show_id="true" Show_Val="false" Pos="-652,-20" rotation="0" hflip="-1" vflip="1" label="50" idLabPos="5,-25" labelrot="0" valLabPos="-16,20" valLabRot="0" Num_Inputs="2" Inverted="false" Open_Collector="false" Input_High_V="6 V" Input_Low_V="3.1 V" Input_Imped="1e+09 Ω" Out_High_V="0 V" Out_Low_V="12 V" Out_Imped="40 Ω" initHigh="false" Tpd_ps="10000 ps" Tr_ps="3000 ps" Tf_ps="4000 ps" />
 
-<item itemtype="Or Gate" CircId="Or Gate-3026" mainComp="false" Show_id="true" Show_Val="false" Pos="-672,-76" rotation="0" hflip="-1" vflip="1" label="100" idLabPos="4.68641,-23.1006" labelrot="0" valLabPos="-16,20" valLabRot="0" Num_Inputs="2" Inverted="false" Open_Collector="false" Input_High_V="6 V" Input_Low_V="3.1 V" Input_Imped="1e+09 Ω" Out_High_V="12 V" Out_Low_V="0 V" Out_Imped="40 Ω" initHigh="false" Tpd_ps="1 ps" Tr_ps="1 ps" Tf_ps="1 ps" />
+<item itemtype="Or Gate" CircId="Or Gate-3026" mainComp="false" Show_id="true" Show_Val="false" Pos="-672,-76" rotation="0" hflip="-1" vflip="1" label="100" idLabPos="4,-23" labelrot="0" valLabPos="-16,20" valLabRot="0" Num_Inputs="2" Inverted="false" Open_Collector="false" Input_High_V="6 V" Input_Low_V="3.1 V" Input_Imped="1e+09 Ω" Out_High_V="12 V" Out_Low_V="0 V" Out_Imped="40 Ω" initHigh="false" Tpd_ps="1 ps" Tr_ps="1 ps" Tf_ps="1 ps" />
 
 <item itemtype="And Gate" CircId="And Gate-3107" mainComp="false" Show_id="false" Show_Val="false" Pos="-592,96" rotation="0" hflip="1" vflip="1" label="And Gate-3107" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Num_Inputs="2" Inverted="false" Open_Collector="false" Input_High_V="2.5 V" Input_Low_V="2.5 V" Input_Imped="1e+09 Ω" Out_High_V="5 V" Out_Low_V="0 V" Out_Imped="40 Ω" initHigh="false" Tpd_ps="10000 ps" Tr_ps="3000 ps" Tf_ps="4000 ps" />
 
@@ -104,164 +104,164 @@
 
 <item itemtype="Node" CircId="Node-3121" mainComp="false" Pos="-624,44" />
 
-<item itemtype="Connector" uid="connector-3027" startpinid="Node-980-2" endpinid="Node-987-0" pointList="76,-204,76,-124" />
+<item itemtype="Connector" uid="connector-3122" startpinid="Node-980-2" endpinid="Node-987-0" pointList="76,-204,76,-124" />
 
-<item itemtype="Connector" uid="connector-3028" startpinid="RelaySPST-974-switch0pinN" endpinid="Node-980-0" pointList="32,-228,76,-228,76,-204" />
+<item itemtype="Connector" uid="connector-3123" startpinid="RelaySPST-974-switch0pinN" endpinid="Node-980-0" pointList="32,-228,76,-228,76,-204" />
 
-<item itemtype="Connector" uid="connector-3029" startpinid="RelaySPST-976-inductor-rPin" endpinid="RelaySPST-974-inductor-lPin" pointList="-212,-212,0,-212" />
+<item itemtype="Connector" uid="connector-3124" startpinid="RelaySPST-976-inductor-rPin" endpinid="RelaySPST-974-inductor-lPin" pointList="-212,-212,0,-212" />
 
-<item itemtype="Connector" uid="connector-3030" startpinid="RelaySPST-977-switch0pinN" endpinid="Node-987-1" pointList="32,-164,68,-164,68,-124,76,-124" />
+<item itemtype="Connector" uid="connector-3125" startpinid="RelaySPST-977-switch0pinN" endpinid="Node-987-1" pointList="32,-164,68,-164,68,-124,76,-124" />
 
-<item itemtype="Connector" uid="connector-3031" startpinid="Node-987-2" endpinid="Node-975-0" pointList="76,-124,76,-116" />
+<item itemtype="Connector" uid="connector-3126" startpinid="Node-987-2" endpinid="Node-975-0" pointList="76,-124,76,-116" />
 
-<item itemtype="Connector" uid="connector-3032" startpinid="Node-968-1" endpinid="RelaySPST-974-pinP2" pointList="-44,-228,0,-228" />
+<item itemtype="Connector" uid="connector-3127" startpinid="Node-968-1" endpinid="RelaySPST-974-pinP2" pointList="-44,-228,0,-228" />
 
-<item itemtype="Connector" uid="connector-3033" startpinid="RelaySPST-977-inductor-rPin" endpinid="Node-975-1" pointList="32,-148,60,-148,60,-116,76,-116" />
+<item itemtype="Connector" uid="connector-3128" startpinid="RelaySPST-977-inductor-rPin" endpinid="Node-975-1" pointList="32,-148,60,-148,60,-116,76,-116" />
 
-<item itemtype="Connector" uid="connector-3034" startpinid="RelaySPST-974-inductor-rPin" endpinid="Node-980-1" pointList="32,-212,76,-212,76,-204" />
+<item itemtype="Connector" uid="connector-3129" startpinid="RelaySPST-974-inductor-rPin" endpinid="Node-980-1" pointList="32,-212,76,-212,76,-204" />
 
-<item itemtype="Connector" uid="connector-3035" startpinid="RelaySPST-969-pinP2" endpinid="Node-2872-0" pointList="-244,-164,-264,-164" />
+<item itemtype="Connector" uid="connector-3130" startpinid="RelaySPST-969-pinP2" endpinid="Node-2872-0" pointList="-244,-164,-264,-164" />
 
-<item itemtype="Connector" uid="connector-3036" startpinid="Node-1036-2" endpinid="Node-2875-0" pointList="-296,-124,-296,-228,-264,-228" />
+<item itemtype="Connector" uid="connector-3131" startpinid="Node-1036-2" endpinid="Node-2875-0" pointList="-296,-124,-296,-228,-264,-228" />
 
-<item itemtype="Connector" uid="connector-3037" startpinid="Ground-1542-Gnd" endpinid="Push-871-pinP0" pointList="-680,-244,-636,-244" />
+<item itemtype="Connector" uid="connector-3132" startpinid="Ground-1542-Gnd" endpinid="Push-871-pinP0" pointList="-680,-244,-636,-244" />
 
-<item itemtype="Connector" uid="connector-3038" startpinid="Seven Segment-1632-pin_commonb" endpinid="ResistorDip-1631-resistor8-ePin17" pointList="-216,136,-216,152,-296,152,-296,144,-360,144" />
+<item itemtype="Connector" uid="connector-3133" startpinid="Seven Segment-1632-pin_commonb" endpinid="ResistorDip-1631-resistor8-ePin17" pointList="-216,136,-216,152,-296,152,-296,144,-360,144" />
 
-<item itemtype="Connector" uid="connector-3039" startpinid="ResistorDip-1631-resistor9-ePin19" endpinid="Seven Segment-1632-pin_commonc" pointList="-360,152,-304,152,-304,160,-184,160,-184,136" />
+<item itemtype="Connector" uid="connector-3134" startpinid="ResistorDip-1631-resistor9-ePin19" endpinid="Seven Segment-1632-pin_commonc" pointList="-360,152,-304,152,-304,160,-184,160,-184,136" />
 
-<item itemtype="Connector" uid="connector-3040" startpinid="ResistorDip-1631-resistor1-ePin3" endpinid="Seven Segment-1632-pin_b" pointList="-360,88,-280,88" />
+<item itemtype="Connector" uid="connector-3135" startpinid="ResistorDip-1631-resistor1-ePin3" endpinid="Seven Segment-1632-pin_b" pointList="-360,88,-280,88" />
 
-<item itemtype="Connector" uid="connector-3041" startpinid="ResistorDip-1631-resistor0-ePin1" endpinid="Seven Segment-1632-pin_a" pointList="-360,80,-280,80" />
+<item itemtype="Connector" uid="connector-3136" startpinid="ResistorDip-1631-resistor0-ePin1" endpinid="Seven Segment-1632-pin_a" pointList="-360,80,-280,80" />
 
-<item itemtype="Connector" uid="connector-3042" startpinid="ResistorDip-1631-resistor4-ePin9" endpinid="Seven Segment-1632-pin_e" pointList="-360,112,-280,112" />
+<item itemtype="Connector" uid="connector-3137" startpinid="ResistorDip-1631-resistor4-ePin9" endpinid="Seven Segment-1632-pin_e" pointList="-360,112,-280,112" />
 
-<item itemtype="Connector" uid="connector-3043" startpinid="tiny84-1634-PORTA1" endpinid="ResistorDip-1631-resistor1-ePin2" pointList="-456,88,-392,88" />
+<item itemtype="Connector" uid="connector-3138" startpinid="tiny84-1634-PORTA1" endpinid="ResistorDip-1631-resistor1-ePin2" pointList="-456,88,-392,88" />
 
-<item itemtype="Connector" uid="connector-3044" startpinid="ResistorDip-1631-resistor6-ePin12" endpinid="tiny84-1634-PORTA6" pointList="-392,128,-508,128,-508,120,-504,120" />
+<item itemtype="Connector" uid="connector-3139" startpinid="ResistorDip-1631-resistor6-ePin12" endpinid="tiny84-1634-PORTA6" pointList="-392,128,-508,128,-508,120,-504,120" />
 
-<item itemtype="Connector" uid="connector-3045" startpinid="tiny84-1634-PORTA2" endpinid="ResistorDip-1631-resistor2-ePin4" pointList="-456,96,-392,96" />
+<item itemtype="Connector" uid="connector-3140" startpinid="tiny84-1634-PORTA2" endpinid="ResistorDip-1631-resistor2-ePin4" pointList="-456,96,-392,96" />
 
-<item itemtype="Connector" uid="connector-3046" startpinid="tiny84-1634-PORTA3" endpinid="ResistorDip-1631-resistor3-ePin6" pointList="-456,104,-392,104" />
+<item itemtype="Connector" uid="connector-3141" startpinid="tiny84-1634-PORTA3" endpinid="ResistorDip-1631-resistor3-ePin6" pointList="-456,104,-392,104" />
 
-<item itemtype="Connector" uid="connector-3047" startpinid="ResistorDip-1631-resistor5-ePin11" endpinid="Seven Segment-1632-pin_f" pointList="-360,120,-280,120" />
+<item itemtype="Connector" uid="connector-3142" startpinid="ResistorDip-1631-resistor5-ePin11" endpinid="Seven Segment-1632-pin_f" pointList="-360,120,-280,120" />
 
-<item itemtype="Connector" uid="connector-3048" startpinid="tiny84-1634-PORTA5" endpinid="ResistorDip-1631-resistor5-ePin10" pointList="-456,120,-392,120" />
+<item itemtype="Connector" uid="connector-3143" startpinid="tiny84-1634-PORTA5" endpinid="ResistorDip-1631-resistor5-ePin10" pointList="-456,120,-392,120" />
 
-<item itemtype="Connector" uid="connector-3049" startpinid="ResistorDip-1631-resistor7-ePin14" endpinid="tiny84-1634-PORTB0" pointList="-392,136,-520,136,-520,80,-504,80" />
+<item itemtype="Connector" uid="connector-3144" startpinid="ResistorDip-1631-resistor7-ePin14" endpinid="tiny84-1634-PORTB0" pointList="-392,136,-520,136,-520,80,-504,80" />
 
-<item itemtype="Connector" uid="connector-3050" startpinid="ResistorDip-1631-resistor7-ePin15" endpinid="Seven Segment-1632-pin_commona" pointList="-360,136,-288,136,-288,148,-248,148,-248,136" />
+<item itemtype="Connector" uid="connector-3145" startpinid="ResistorDip-1631-resistor7-ePin15" endpinid="Seven Segment-1632-pin_commona" pointList="-360,136,-288,136,-288,148,-248,148,-248,136" />
 
-<item itemtype="Connector" uid="connector-3051" startpinid="Seven Segment-1632-pin_g" endpinid="ResistorDip-1631-resistor6-ePin13" pointList="-280,128,-360,128" />
+<item itemtype="Connector" uid="connector-3146" startpinid="Seven Segment-1632-pin_g" endpinid="ResistorDip-1631-resistor6-ePin13" pointList="-280,128,-360,128" />
 
-<item itemtype="Connector" uid="connector-3052" startpinid="tiny84-1634-PORTA0" endpinid="ResistorDip-1631-resistor0-ePin0" pointList="-456,80,-392,80" />
+<item itemtype="Connector" uid="connector-3147" startpinid="tiny84-1634-PORTA0" endpinid="ResistorDip-1631-resistor0-ePin0" pointList="-456,80,-392,80" />
 
-<item itemtype="Connector" uid="connector-3053" startpinid="ResistorDip-1631-resistor9-ePin18" endpinid="tiny84-1634-PORTB2" pointList="-392,152,-512,152,-512,104,-504,104" />
+<item itemtype="Connector" uid="connector-3148" startpinid="ResistorDip-1631-resistor9-ePin18" endpinid="tiny84-1634-PORTB2" pointList="-392,152,-512,152,-512,104,-504,104" />
 
-<item itemtype="Connector" uid="connector-3054" startpinid="ResistorDip-1631-resistor3-ePin7" endpinid="Seven Segment-1632-pin_d" pointList="-360,104,-280,104" />
+<item itemtype="Connector" uid="connector-3149" startpinid="ResistorDip-1631-resistor3-ePin7" endpinid="Seven Segment-1632-pin_d" pointList="-360,104,-280,104" />
 
-<item itemtype="Connector" uid="connector-3055" startpinid="ResistorDip-1631-resistor2-ePin5" endpinid="Seven Segment-1632-pin_c" pointList="-360,96,-280,96" />
+<item itemtype="Connector" uid="connector-3150" startpinid="ResistorDip-1631-resistor2-ePin5" endpinid="Seven Segment-1632-pin_c" pointList="-360,96,-280,96" />
 
-<item itemtype="Connector" uid="connector-3056" startpinid="tiny84-1634-PORTA4" endpinid="ResistorDip-1631-resistor4-ePin8" pointList="-456,112,-392,112" />
+<item itemtype="Connector" uid="connector-3151" startpinid="tiny84-1634-PORTA4" endpinid="ResistorDip-1631-resistor4-ePin8" pointList="-456,112,-392,112" />
 
-<item itemtype="Connector" uid="connector-3057" startpinid="Push-871-switch0pinN" endpinid="tiny45-1774-PORTB3" pointList="-604,-244,-584,-244,-584,-236,-544,-236" />
+<item itemtype="Connector" uid="connector-3152" startpinid="Push-871-switch0pinN" endpinid="tiny45-1774-PORTB3" pointList="-604,-244,-584,-244,-584,-236,-544,-236" />
 
-<item itemtype="Connector" uid="connector-3058" startpinid="Push-873-switch0pinN" endpinid="tiny45-1774-PORTB4" pointList="-604,-200,-584,-200,-584,-228,-544,-228" />
+<item itemtype="Connector" uid="connector-3153" startpinid="Push-873-switch0pinN" endpinid="tiny45-1774-PORTB4" pointList="-604,-200,-584,-200,-584,-228,-544,-228" />
 
-<item itemtype="Connector" uid="connector-3059" startpinid="RelaySPST-1030-inductor-lPin" endpinid="tiny45-1774-PORTB0" pointList="-444,-108,-468,-108,-468,-220,-496,-220" />
+<item itemtype="Connector" uid="connector-3154" startpinid="RelaySPST-1030-inductor-lPin" endpinid="tiny45-1774-PORTB0" pointList="-444,-108,-468,-108,-468,-220,-496,-220" />
 
-<item itemtype="Connector" uid="connector-3060" startpinid="RelaySPST-969-inductor-lPin" endpinid="tiny45-1774-PORTB1" pointList="-244,-148,-460,-148,-460,-228,-496,-228" />
+<item itemtype="Connector" uid="connector-3155" startpinid="RelaySPST-969-inductor-lPin" endpinid="tiny45-1774-PORTB1" pointList="-244,-148,-460,-148,-460,-228,-496,-228" />
 
-<item itemtype="Connector" uid="connector-3061" startpinid="RelaySPST-976-inductor-lPin" endpinid="tiny45-1774-PORTB2" pointList="-244,-212,-452,-212,-452,-236,-496,-236" />
+<item itemtype="Connector" uid="connector-3156" startpinid="RelaySPST-976-inductor-lPin" endpinid="tiny45-1774-PORTB2" pointList="-244,-212,-452,-212,-452,-236,-496,-236" />
 
-<item itemtype="Connector" uid="connector-3062" startpinid="Node-1452-2" endpinid="DcMotor-978-lPin" pointList="-172,-228,-172,-268,-156,-268" />
+<item itemtype="Connector" uid="connector-3157" startpinid="Node-1452-2" endpinid="DcMotor-978-lPin" pointList="-172,-228,-172,-268,-156,-268" />
 
-<item itemtype="Connector" uid="connector-3063" startpinid="Rail-993-outnod" endpinid="VarResistor-1788-lPin" pointList="-548,-124,-516,-124" />
+<item itemtype="Connector" uid="connector-3158" startpinid="Rail-993-outnod" endpinid="VarResistor-1788-lPin" pointList="-548,-124,-484,-124" />
 
-<item itemtype="Connector" uid="connector-3064" startpinid="RelaySPST-969-switch0pinN" endpinid="Node-968-0" pointList="-212,-164,-44,-164,-44,-228" />
+<item itemtype="Connector" uid="connector-3159" startpinid="RelaySPST-969-switch0pinN" endpinid="Node-968-0" pointList="-212,-164,-44,-164,-44,-228" />
 
-<item itemtype="Connector" uid="connector-3065" startpinid="Node-975-2" endpinid="Ground-981-Gnd" pointList="76,-116,76,-56" />
+<item itemtype="Connector" uid="connector-3160" startpinid="Node-975-2" endpinid="Ground-981-Gnd" pointList="76,-116,76,-56" />
 
-<item itemtype="Connector" uid="connector-3066" startpinid="RelaySPST-977-pinP2" endpinid="Node-1452-0" pointList="0,-164,-12,-164,-12,-192,-172,-192,-172,-228" />
+<item itemtype="Connector" uid="connector-3161" startpinid="RelaySPST-977-pinP2" endpinid="Node-1452-0" pointList="0,-164,-12,-164,-12,-192,-172,-192,-172,-228" />
 
-<item itemtype="Connector" uid="connector-3067" startpinid="ResistorDip-1631-resistor8-ePin16" endpinid="tiny84-1634-PORTB1" pointList="-392,144,-528,144,-528,88,-504,88" />
+<item itemtype="Connector" uid="connector-3162" startpinid="ResistorDip-1631-resistor8-ePin16" endpinid="tiny84-1634-PORTB1" pointList="-392,144,-528,144,-528,88,-504,88" />
 
-<item itemtype="Connector" uid="connector-3068" startpinid="SerialPort-889-pin0" endpinid="tiny45-1774-PORTB5" pointList="-380,-308,-448,-308,-448,-276,-564,-276,-564,-244,-544,-244" />
+<item itemtype="Connector" uid="connector-3163" startpinid="SerialPort-889-pin0" endpinid="tiny45-1774-PORTB5" pointList="-380,-308,-448,-308,-448,-276,-564,-276,-564,-244,-544,-244" />
 
-<item itemtype="Connector" uid="connector-3069" startpinid="Or Gate-2794-out" endpinid="Led-984-lPin" pointList="-104,-72,-104,-40,-208,-40" />
+<item itemtype="Connector" uid="connector-3164" startpinid="Or Gate-2794-out" endpinid="Led-984-lPin" pointList="-104,-72,-104,-40,-208,-40" />
 
-<item itemtype="Connector" uid="connector-3070" startpinid="Or Gate-2794-in1" endpinid="Node-2872-1" pointList="-108,-104,-108,-180,-264,-180,-264,-164" />
+<item itemtype="Connector" uid="connector-3165" startpinid="Or Gate-2794-in1" endpinid="Node-2872-1" pointList="-108,-104,-108,-180,-264,-180,-264,-164" />
 
-<item itemtype="Connector" uid="connector-3071" startpinid="Node-2872-2" endpinid="Node-1036-0" pointList="-264,-164,-264,-124,-296,-124" />
+<item itemtype="Connector" uid="connector-3166" startpinid="Node-2872-2" endpinid="Node-1036-0" pointList="-264,-164,-264,-124,-296,-124" />
 
-<item itemtype="Connector" uid="connector-3072" startpinid="Or Gate-2794-in0" endpinid="Node-2875-1" pointList="-100,-104,-100,-188,-264,-188,-264,-228" />
+<item itemtype="Connector" uid="connector-3167" startpinid="Or Gate-2794-in0" endpinid="Node-2875-1" pointList="-100,-104,-100,-188,-264,-188,-264,-228" />
 
-<item itemtype="Connector" uid="connector-3073" startpinid="Node-2875-2" endpinid="RelaySPST-976-pinP2" pointList="-264,-228,-244,-228" />
+<item itemtype="Connector" uid="connector-3168" startpinid="Node-2875-2" endpinid="RelaySPST-976-pinP2" pointList="-264,-228,-244,-228" />
 
-<item itemtype="Connector" uid="connector-3074" startpinid="RelaySPST-969-inductor-rPin" endpinid="RelaySPST-977-inductor-lPin" pointList="-212,-148,0,-148" />
+<item itemtype="Connector" uid="connector-3169" startpinid="RelaySPST-969-inductor-rPin" endpinid="RelaySPST-977-inductor-lPin" pointList="-212,-148,0,-148" />
 
-<item itemtype="Connector" uid="connector-3075" startpinid="Xor Gate-2877-out" endpinid="Led-991-lPin" pointList="-160,-96,-160,-76,-208,-76" />
+<item itemtype="Connector" uid="connector-3170" startpinid="Xor Gate-2877-out" endpinid="Led-991-lPin" pointList="-160,-96,-160,-76,-208,-76" />
 
-<item itemtype="Connector" uid="connector-3076" startpinid="RelaySPST-976-switch0pinN" endpinid="Node-1452-1" pointList="-212,-228,-172,-228" />
+<item itemtype="Connector" uid="connector-3171" startpinid="RelaySPST-976-switch0pinN" endpinid="Node-1452-1" pointList="-212,-228,-172,-228" />
 
-<item itemtype="Connector" uid="connector-3077" startpinid="Node-968-2" endpinid="Node-2891-0" pointList="-44,-228,-60,-228" />
+<item itemtype="Connector" uid="connector-3172" startpinid="Node-968-2" endpinid="Node-2891-0" pointList="-44,-228,-60,-228" />
 
-<item itemtype="Connector" uid="connector-3078" startpinid="Node-2891-2" endpinid="DcMotor-978-rPin" pointList="-60,-228,-60,-268,-76,-268" />
+<item itemtype="Connector" uid="connector-3173" startpinid="Node-2891-2" endpinid="DcMotor-978-rPin" pointList="-60,-228,-60,-268,-76,-268" />
 
-<item itemtype="Connector" uid="connector-3079" startpinid="Node-2891-1" endpinid="Xor Gate-2877-in1" pointList="-60,-228,-60,-136,-164,-136,-164,-128" />
+<item itemtype="Connector" uid="connector-3174" startpinid="Node-2891-1" endpinid="Xor Gate-2877-in1" pointList="-60,-228,-60,-136,-164,-136,-164,-128" />
 
-<item itemtype="Connector" uid="connector-3081" startpinid="RelaySPST-1030-inductor-rPin" endpinid="Ground-1038-Gnd" pointList="-412,-108,-296,-108,-296,-76" />
+<item itemtype="Connector" uid="connector-3175" startpinid="RelaySPST-1030-inductor-rPin" endpinid="Ground-1038-Gnd" pointList="-412,-108,-296,-108,-296,-76" />
 
-<item itemtype="Connector" uid="connector-3083" startpinid="Ground-869-Gnd" endpinid="Push-873-pinP0" pointList="-680,-200,-636,-200" />
+<item itemtype="Connector" uid="connector-3176" startpinid="Ground-869-Gnd" endpinid="Push-873-pinP0" pointList="-680,-200,-636,-200" />
 
-<item itemtype="Connector" uid="connector-3084" startpinid="Voltimeter-2992-rPin" endpinid="Node-3023-0" pointList="-588,-56,-588,-16" />
+<item itemtype="Connector" uid="connector-3177" startpinid="Voltimeter-2992-rPin" endpinid="Node-3023-0" pointList="-588,-56,-588,-16" />
 
-<item itemtype="Connector" uid="connector-3085" startpinid="Voltimeter-2993-rPin" endpinid="Node-3005-1" pointList="-508,0,-508,8,-588,8" />
+<item itemtype="Connector" uid="connector-3178" startpinid="Voltimeter-2993-rPin" endpinid="Node-3005-1" pointList="-508,0,-508,8,-588,8" />
 
-<item itemtype="Connector" uid="connector-3086" startpinid="Node-3005-2" endpinid="Ground-3002-Gnd" pointList="-588,8,-588,8" />
+<item itemtype="Connector" uid="connector-3179" startpinid="Node-3005-2" endpinid="Ground-3002-Gnd" pointList="-588,8,-588,8" />
 
-<item itemtype="Connector" uid="connector-3091" startpinid="Voltimeter-3015-rPin" endpinid="Node-3020-1" pointList="-776,-20,-776,-4,-588,-4" />
+<item itemtype="Connector" uid="connector-3180" startpinid="Voltimeter-3015-rPin" endpinid="Node-3020-1" pointList="-776,-20,-776,-4,-588,-4" />
 
-<item itemtype="Connector" uid="connector-3092" startpinid="Node-3020-2" endpinid="Node-3005-0" pointList="-588,-4,-588,8" />
+<item itemtype="Connector" uid="connector-3181" startpinid="Node-3020-2" endpinid="Node-3005-0" pointList="-588,-4,-588,8" />
 
-<item itemtype="Connector" uid="connector-3093" startpinid="Voltimeter-3016-rPin" endpinid="Node-3023-1" pointList="-784,60,-784,76,-608,76,-608,-16,-588,-16" />
+<item itemtype="Connector" uid="connector-3182" startpinid="Voltimeter-3016-rPin" endpinid="Node-3023-1" pointList="-784,60,-784,76,-608,76,-608,-16,-588,-16" />
 
-<item itemtype="Connector" uid="connector-3094" startpinid="Node-3023-2" endpinid="Node-3020-0" pointList="-588,-16,-588,-4" />
+<item itemtype="Connector" uid="connector-3183" startpinid="Node-3023-2" endpinid="Node-3020-0" pointList="-588,-16,-588,-4" />
 
-<item itemtype="Connector" uid="connector-3095" startpinid="Voltimeter-2992-outnod" endpinid="Or Gate-3026-in0" pointList="-612,-80,-656,-80" />
+<item itemtype="Connector" uid="connector-3184" startpinid="Voltimeter-2992-outnod" endpinid="Or Gate-3026-in0" pointList="-612,-80,-656,-80" />
 
-<item itemtype="Connector" uid="connector-3096" startpinid="Or Gate-3026-out" endpinid="Voltimeter-3015-lPin" pointList="-688,-76,-712,-76,-712,-20,-760,-20" />
+<item itemtype="Connector" uid="connector-3185" startpinid="Or Gate-3026-out" endpinid="Voltimeter-3015-lPin" pointList="-688,-76,-712,-76,-712,-20,-760,-20" />
 
-<item itemtype="Connector" uid="connector-3097" startpinid="Voltimeter-2993-outnod" endpinid="Or Gate-3025-in0" pointList="-532,-24,-636,-24" />
+<item itemtype="Connector" uid="connector-3186" startpinid="Voltimeter-2993-outnod" endpinid="Or Gate-3025-in0" pointList="-532,-24,-636,-24" />
 
-<item itemtype="Connector" uid="connector-3100" startpinid="Or Gate-3025-out" endpinid="Voltimeter-3016-lPin" pointList="-668,-20,-684,-20,-684,60,-768,60" />
+<item itemtype="Connector" uid="connector-3187" startpinid="Or Gate-3025-out" endpinid="Voltimeter-3016-lPin" pointList="-668,-20,-684,-20,-684,60,-768,60" />
 
-<item itemtype="Connector" uid="connector-3082" startpinid="VarResistor-1788-rPin" endpinid="RelaySPST-1030-pinP2" pointList="-484,-124,-444,-124" />
+<item itemtype="Connector" uid="connector-3188" startpinid="VarResistor-1788-rPin" endpinid="RelaySPST-1030-pinP2" pointList="-516,-124,-444,-124" />
 
-<item itemtype="Connector" uid="Connector-3102" startpinid="Node-3101-2" endpinid="Node-3104-0" pointList="-392,-124,-356,-124" />
+<item itemtype="Connector" uid="connector-3189" startpinid="Node-3101-2" endpinid="Node-3104-0" pointList="-392,-124,-356,-124" />
 
-<item itemtype="Connector" uid="Connector-3103" startpinid="Node-3101-1" endpinid="Voltimeter-2992-lPin" pointList="-392,-124,-392,-56,-572,-56" />
+<item itemtype="Connector" uid="connector-3190" startpinid="Node-3101-1" endpinid="Voltimeter-2992-lPin" pointList="-392,-124,-392,-56,-572,-56" />
 
-<item itemtype="Connector" uid="Connector-3105" startpinid="Node-3104-2" endpinid="Node-1036-1" pointList="-356,-124,-296,-124" />
+<item itemtype="Connector" uid="connector-3191" startpinid="Node-3104-2" endpinid="Node-1036-1" pointList="-356,-124,-296,-124" />
 
-<item itemtype="Connector" uid="Connector-3106" startpinid="Node-3104-1" endpinid="Voltimeter-2993-lPin" pointList="-356,-124,-356,0,-492,0" />
+<item itemtype="Connector" uid="connector-3192" startpinid="Node-3104-1" endpinid="Voltimeter-2993-lPin" pointList="-356,-124,-356,0,-492,0" />
 
-<item itemtype="Connector" uid="connector-3080" startpinid="RelaySPST-1030-switch0pinN" endpinid="Node-3112-0" pointList="-412,-124,-404,-124" />
+<item itemtype="Connector" uid="connector-3193" startpinid="RelaySPST-1030-switch0pinN" endpinid="Node-3112-0" pointList="-412,-124,-404,-124" />
 
-<item itemtype="Connector" uid="Connector-3113" startpinid="Node-3112-2" endpinid="Node-3101-0" pointList="-404,-124,-392,-124" />
+<item itemtype="Connector" uid="connector-3194" startpinid="Node-3112-2" endpinid="Node-3101-0" pointList="-404,-124,-392,-124" />
 
-<item itemtype="Connector" uid="Connector-3114" startpinid="Node-3112-1" endpinid="Node-3121-0" pointList="-404,-124,-404,44,-624,44" />
+<item itemtype="Connector" uid="connector-3195" startpinid="Node-3112-1" endpinid="Node-3121-0" pointList="-404,-124,-404,44,-624,44" />
 
-<item itemtype="Connector" uid="Connector-3116" startpinid="And Gate-3107-out" endpinid="tiny84-1634-PORTB3" pointList="-576,96,-504,96" />
+<item itemtype="Connector" uid="connector-3196" startpinid="And Gate-3107-out" endpinid="tiny84-1634-PORTB3" pointList="-576,96,-504,96" />
 
-<item itemtype="Connector" uid="Connector-3117" startpinid="And Gate-3108-out" endpinid="tiny84-1634-PORTA7" pointList="-576,120,-552,120,-552,112,-504,112" />
+<item itemtype="Connector" uid="connector-3197" startpinid="And Gate-3108-out" endpinid="tiny84-1634-PORTA7" pointList="-576,120,-552,120,-552,112,-504,112" />
 
-<item itemtype="Connector" uid="Connector-3118" startpinid="And Gate-3107-in1" endpinid="Voltimeter-3016-outnod" pointList="-608,100,-820,100,-820,36,-808,36" />
+<item itemtype="Connector" uid="connector-3198" startpinid="And Gate-3107-in1" endpinid="Voltimeter-3016-outnod" pointList="-608,100,-820,100,-820,36,-808,36" />
 
-<item itemtype="Connector" uid="Connector-3119" startpinid="Voltimeter-3015-outnod" endpinid="And Gate-3108-in0" pointList="-800,-44,-836,-44,-836,116,-608,116" />
+<item itemtype="Connector" uid="connector-3199" startpinid="Voltimeter-3015-outnod" endpinid="And Gate-3108-in0" pointList="-800,-44,-836,-44,-836,116,-608,116" />
 
-<item itemtype="Connector" uid="Connector-3120" startpinid="And Gate-3108-in1" endpinid="Node-3121-1" pointList="-608,124,-652,124,-652,44,-624,44" />
+<item itemtype="Connector" uid="connector-3200" startpinid="And Gate-3108-in1" endpinid="Node-3121-1" pointList="-608,124,-652,124,-652,44,-624,44" />
 
-<item itemtype="Connector" uid="Connector-3122" startpinid="Node-3121-2" endpinid="And Gate-3107-in0" pointList="-624,44,-624,92,-608,92" />
+<item itemtype="Connector" uid="connector-3201" startpinid="Node-3121-2" endpinid="And Gate-3107-in0" pointList="-624,44,-624,92,-608,92" />
 
 </circuit>

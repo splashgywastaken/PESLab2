@@ -12,7 +12,7 @@
 
 
 #define INPORT50 PB3 // входной пин: 1, если скорость - 50%
-#define INPORT100 PA7 // входной пин: 1, если скорость - 100%
+#define INPORT75 PA7 // входной пин: 1, если скорость - 75%
 
 #include <stdbool.h>
 #include <stdint.h>
@@ -200,24 +200,34 @@ void pins_setup () {
     // входные порты
     DDRB &= ~ (1 << INPORT50);
     PORTB |= (1 << INPORT50); // подтянут
-    DDRA &= ~ (1 << INPORT100);
-    PORTA |= (1 << INPORT100); // подтянут
+    DDRA &= ~ (1 << INPORT75);
+    PORTA |= (1 << INPORT75); // подтянут
 }
 
-int main(void) {
+int main(void)
+{
     pins_setup();
     _delay_ms(50);
-    while (1) {
+    while (1)
+    {
         display();
-        if ((PINB & (1 << INPORT50)) != 0  && (PINA & (1 << INPORT100)) == 0) // если двигатель работает на 50% от максимальной скорости
+        // если двигатель работает на 50% от максимальной скорости
+        if ((PINB & (1 << INPORT50)) != 0 && (PINA & (1 << INPORT75)) == 0) 
         {
             set_OUTSTR(50);
         }
-        else if ((PINB & (1 << INPORT50)) == 0  && (PINA & (1 << INPORT100)) != 0) // если двигатель работает на 100% от максимальной скорости
+        // если двигатель работает на 75% от максимальной скорости
+        else if ((PINB & (1 << INPORT50)) == 0 && (PINA & (1 << INPORT75)) != 0) 
+        {
+            set_OUTSTR(75);
+        }
+        // если двигатель работает на 100% от максимальной скорости
+        else if ((PINB & (1 << INPORT50)) != 0 && (PINA & (1 << INPORT75)) != 0)
         {
             set_OUTSTR(100);
         }
-        else {
+        else
+        {
             set_OUTSTR(0);
         }
         _delay_ms(10);
